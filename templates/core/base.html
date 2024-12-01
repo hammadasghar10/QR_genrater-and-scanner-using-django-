@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Home{% endblock %}</title>
+    <link rel="stylesheet" href="{% static "style/base.css" %}">
+</head>
+<body>
+   <nav>
+    <li><a href="{% url "home" %}">Home</a></li>
+    <li><a href="{% url "genrate" %}">Generate QR </a></li>
+    <li><a href="{% url "scan" %}">Scan Qr</a></li>
+   </nav>
+   <h1 class="main-heading">Bismillah Utility Store </h1>
+   {% block content %}{% endblock content %}
+</body>
+</html>

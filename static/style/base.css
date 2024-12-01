@@ -1,0 +1,125 @@
+/* Base Reset */
+body, h1, ul, li, a, form, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9; /* Light gray */
+    color: #333; /* Dark text */
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #1e3a8a; /* Deep blue */
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #1e3a8a;
+    padding: 1rem;
+}
+
+nav li {
+    display: inline;
+    margin-right: 1.5rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #f9a825; /* Yellow highlight */
+}
+
+/* Main Heading */
+.main-heading {
+    margin: 2rem 0;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+/* Centered Container */
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9; /* Light gray */
+}
+
+/* Form Container */
+.container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Form Elements */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus {
+    border-color: #1e3a8a;
+    box-shadow: 0 0 5px rgba(30, 58, 138, 0.5);
+}
+
+form button {
+    background-color: #1e3a8a;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #f9a825;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    form button {
+        width: 100%;
+    }
+}

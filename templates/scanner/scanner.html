@@ -1,0 +1,21 @@
+{% extends "core/base.html" %}
+{% block title %}{% endblock title %}
+{% block content %}
+<div class="center-container">
+    <div class="container">
+        <h1> Scan QR Code</h1>
+        <form action="{% url "scan" %}" method="post" enctype="multipart/form-data">
+
+            {% csrf_token %}
+            <input type="text" name="mobile_number" 
+            placeholder="Please Enter your 11 digit number"
+            required pattern="\d{11}">
+            <input type="file" name="qr_image" id="qr-input" accept="image/*">
+            <button type="submit">Scan</button>
+        </form>
+        <h2>{{result}}</h2>
+    </div>
+
+</div>
+
+{% endblock content %}

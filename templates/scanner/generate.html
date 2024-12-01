@@ -1,0 +1,28 @@
+{% extends "core/base.html" %}
+{% block title %} Generate{% endblock %}
+{% block content %}
+   <div class="center-container">
+    <div class="container">
+      <form action="{% url "genrate" %}" method='post'>
+        {% csrf_token %}
+        <input type="text" name="mobile_number" 
+        placeholder="Please Enter your 11 digit number"
+        required pattern="\d{11}">
+        <input type="text" name="qr-data" id=""
+        placeholder="Enter text to Generate Qr code"
+        required>
+        <button type="submit">Generate</button>
+      </form>
+      <div class="qr-preview">
+        {% if qr_image_url %} 
+          <h2>Your Qr code </h2>
+          <img src="{{qr_image_url}}" alt="Generated QR Code">
+          <br>
+          <a href="{{qr_image_url}}" download class="download-button">Save QR code</a>
+        {% endif %}
+
+      </div>
+    </div>
+
+   </div>
+{% endblock  %}
